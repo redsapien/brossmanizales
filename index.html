@@ -864,8 +864,9 @@ s0.parentNode.insertBefore(s1,s0);
     </section>
 
     <script>
-        // Fecha objetivo: 31 de Diciembre de 2026
-        const targetDate = new Date("Dec 31, 2026 00:00:00").getTime();
+        // Configurar fecha objetivo para contar hasta 29 días, 20 horas, 20 minutos
+// Calculamos: 29 días * 24h * 60m * 60s * 1000ms + 20h + 20m
+const targetDate = new Date().getTime() + (29 * 24 * 60 * 60 * 1000) + (20 * 60 * 60 * 1000) + (20 * 60 * 1000);
         
         const gD = document.getElementById('gauge-d');
         const gH = document.getElementById('gauge-h');
